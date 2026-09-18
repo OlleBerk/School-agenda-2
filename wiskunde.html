@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiskunde — Studiehub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>:root { --accent: var(--wiskunde); }</style>
+</head>
+<body>
+<a class="skip-link" href="#hoofd">Naar inhoud</a>
+
+<header class="site">
+  <div class="site-top">
+    <h1><a href="index.html">Studiehub</a></h1>
+    <span class="tagline">persoonlijke studie- en planningswand</span>
+  </div>
+  <nav class="tabs" aria-label="Vakken">
+    <a class="tab wk-wiskunde" href="wiskunde.html">Wiskunde</a>
+    <span class="tab wk-natuurkunde is-soon">Natuurkunde</span>
+    <span class="tab wk-scheikunde is-soon">Scheikunde</span>
+    <span class="tab wk-nlt is-soon">NLT</span>
+    <span class="tab wk-mw is-soon">Mij. wet.</span>
+  </nav>
+</header>
+
+<main id="hoofd" class="wrap">
+  <div class="vak-kop">
+    <span class="label">Wiskunde</span>
+    <h1>Wiskunde</h1>
+  </div>
+
+  <section class="blok" aria-labelledby="t-thema">
+    <h2 id="t-thema">Thema's</h2>
+    <p class="uitleg">Vink af wat je beheerst. Voeg zelf thema's toe of verwijder ze.</p>
+    <ul class="themalijst" id="themalijst"></ul>
+    <form class="rij-toevoegen" id="themaForm">
+      <input type="text" id="themaInput" placeholder="Nieuw thema, bijv. Machtsverbanden" required>
+      <button type="submit">Toevoegen</button>
+    </form>
+  </section>
+
+  <section class="blok" aria-labelledby="t-plan">
+    <h2 id="t-plan">Planning</h2>
+    <p class="uitleg">Taken voor deze week, met verplicht of optioneel.</p>
+    <ul class="planlijst" id="planlijst"></ul>
+    <form class="plan-form" id="planForm">
+      <input type="text" id="planInput" placeholder="Taak, bijv. §3.2 opgaven 1–10" required>
+      <select id="planType">
+        <option value="verplicht">Verplicht</option>
+        <option value="optioneel">Optioneel</option>
+      </select>
+      <button type="submit">Toevoegen</button>
+    </form>
+  </section>
+
+  <section class="blok" aria-labelledby="t-reken">
+    <h2 id="t-reken">Rekenhulp — abc-formule</h2>
+    <p class="uitleg">Los ax² + bx + c = 0 op.</p>
+    <form class="rekenrij" id="abcForm">
+      <div class="veld"><label for="a">a</label><input type="number" step="any" id="a" required></div>
+      <div class="veld"><label for="b">b</label><input type="number" step="any" id="b" required></div>
+      <div class="veld"><label for="c">c</label><input type="number" step="any" id="c" required></div>
+      <button type="submit">Bereken</button>
+    </form>
+    <div class="uitkomst" id="abcUitkomst" hidden></div>
+    <details class="uitleg-toggle">
+      <summary>Hoe werkt dit?</summary>
+      <div class="inhoud">
+        Discriminant D = b² − 4ac.<br>
+        Is D &gt; 0: twee oplossingen, x = (−b ± √D) / (2a).<br>
+        Is D = 0: één oplossing, x = −b / (2a).<br>
+        Is D &lt; 0: geen reële oplossingen.
+      </div>
+    </details>
+  </section>
+
+  <section class="blok" aria-labelledby="t-moeilijk">
+    <h2 id="t-moeilijk">Moeilijk vind ik…</h2>
+    <p class="uitleg">Zet hier onderwerpen neer waar je extra op wilt letten bij het leren.</p>
+    <div class="tags" id="moeilijkTags"></div>
+    <form class="rij-toevoegen" id="moeilijkForm">
+      <input type="text" id="moeilijkInput" placeholder="Bijv. Kwadraat afsplitsen" required>
+      <button type="submit">Toevoegen</button>
+    </form>
+  </section>
+
+  <section class="blok" aria-labelledby="t-notities">
+    <h2 id="t-notities">Aantekeningen</h2>
+    <p class="uitleg">Vrije ruimte voor losse notities. Wordt automatisch bewaard.</p>
+    <textarea id="notities" placeholder="Typ hier…"></textarea>
+  </section>
+
+  <section class="blok" aria-labelledby="t-naslag">
+    <h2 id="t-naslag">Naslagwerk</h2>
+    <p class="uitleg">Doorzoekbare formules — vul zelf aan wat je vaak nodig hebt.</p>
+    <input type="text" id="naslagZoek" placeholder="Zoek op naam of trefwoord…" style="width:100%; margin-bottom: 0.9rem;">
+    <div id="naslagLijst"></div>
+  </section>
+</main>
+
+<footer class="site">Studiehub — gebouwd voor eigen gebruik.</footer>
+
+<script src="js/app.js"></script>
+<script src="js/wiskunde.js"></script>
+</body>
+</html>

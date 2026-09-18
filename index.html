@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studiehub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#hoofd">Naar inhoud</a>
+
+<header class="site">
+  <div class="site-top">
+    <h1><a href="index.html">Studiehub</a></h1>
+    <span class="tagline">persoonlijke studie- en planningswand</span>
+  </div>
+  <nav class="tabs" aria-label="Vakken">
+    <a class="tab wk-wiskunde" href="wiskunde.html">Wiskunde</a>
+    <span class="tab wk-natuurkunde is-soon">Natuurkunde</span>
+    <span class="tab wk-scheikunde is-soon">Scheikunde</span>
+    <span class="tab wk-nlt is-soon">NLT</span>
+    <span class="tab wk-mw is-soon">Mij. wet.</span>
+  </nav>
+</header>
+
+<main id="hoofd" class="wrap">
+  <div class="intro">
+    <h2>Alles voor school, op één plek</h2>
+    <p>Per vak een pagina met je thema's, planning, rekenhulp en aantekeningen — zelfde plek als het schrift op je bureau, maar dan doorzoekbaar.</p>
+  </div>
+
+  <div class="vakgrid">
+    <a class="vakkaart klaar" href="wiskunde.html" style="--c: var(--wiskunde)">
+      <span class="naam">Wiskunde</span>
+      <span class="status">Open →</span>
+    </a>
+    <div class="vakkaart soon" style="--c: var(--natuurkunde)">
+      <span class="naam">Natuurkunde</span>
+      <span class="status">Binnenkort</span>
+    </div>
+    <div class="vakkaart soon" style="--c: var(--scheikunde)">
+      <span class="naam">Scheikunde</span>
+      <span class="status">Binnenkort</span>
+    </div>
+    <div class="vakkaart soon" style="--c: var(--nlt)">
+      <span class="naam">NLT</span>
+      <span class="status">Binnenkort</span>
+    </div>
+    <div class="vakkaart soon" style="--c: var(--mw)">
+      <span class="naam">Maatschappijwetenschappen</span>
+      <span class="status">Binnenkort</span>
+    </div>
+  </div>
+</main>
+
+<footer class="site">Studiehub — gebouwd voor eigen gebruik.</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
